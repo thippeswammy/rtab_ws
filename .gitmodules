@@ -1,9 +1,9 @@
 [submodule "src/rtabmap"]
 	path = src/rtabmap
-	url = https://github.com/introlab/rtabmap.git
+	url = https://github.com/thippeswammy/rtabmap.git
 [submodule "src/rtabmap_ros"]
 	path = src/rtabmap_ros
-	url = https://github.com/introlab/rtabmap_ros.git
+	url = https://github.com/thippeswammy/rtabmap_ros.git
 [submodule "src/SuperGluePretrainedNetwork"]
 	path = src/SuperGluePretrainedNetwork
-	url = https://github.com/magicleap/SuperGluePretrainedNetwork.git
+	url = https://github.com/thippeswammy/SuperGluePretrainedNetwork.git
