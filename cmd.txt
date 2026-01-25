@@ -1,0 +1,16 @@
+GFTT + BRIEF    6   Good Features To Track + BRIEF  3   BruteForce Hamming  Often more stable keypoints than FAST.
+
+ros2 launch rtabmap_launch rtabmap.launch.py     rtabmap_args:="--delete_db_on_start \
+                  --Vis/MinInliers 12 \
+                  --RGBD/OptimizeMaxError 0 \
+                  --Rtabmap/DetectionRate 0 \
+                  --Mem/NotLinkedNodesKept true \
+                  --Mem/IntermediateNodes true \
+                  --RGBD/ExportPoses $(pwd)/trajectory_results.txt"     database_path:="$(pwd)/rtabmap.db"     use_sim_time:=true     rgb_topic:=/camera/color/image_raw     depth_topic:=/camera/aligned_depth_to_color/image_raw     camera_info_topic:=/camera/color/camera_info     frame_id:=camera_link     approx_sync:=true     visual_odometry:=true     qos:=1
+
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0.249503 0 base_link camera_link
+
+rtabmap-export --poses --poses_format 2 --include_intermediate --output ./full_trajectory.txt ./rtabmap.db
+
+rtabmap-databaseViewer ./rtabmap.db 
+____________________________________________________________________________________________________________________________________________________

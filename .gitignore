@@ -1,0 +1,18 @@
+# Build and Install
+build/
+install/
+log/
+
+# Large Libraries (>100MB)
+libtorch*/
+
+# Large Data (>100MB)
+*.db
+*.zip
+*.pt
+*.pth
+
+# IDE and System
+.vscode/
+__pycache__/
+*.pyc
