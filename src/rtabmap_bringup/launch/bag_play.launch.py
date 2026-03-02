@@ -7,6 +7,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
+    """Generates the launch description for the RTAB-Map ROS2 application."""
     rtabmap_launch_dir = FindPackageShare('rtabmap_launch')
     
     # Default bag path from user
