@@ -7,6 +7,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
+    """Generates the launch description for the RTAB-Map setup."""
     rtabmap_launch_dir = FindPackageShare('rtabmap_launch')
     
     return LaunchDescription([
