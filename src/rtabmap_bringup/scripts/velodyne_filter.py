@@ -26,6 +26,18 @@ class VelodyneFilter(Node):
         # We cannot use pc2.read_points_numpy(msg) directly if fields have mixed types (throws AssertionError)
         # So we extract XYZ (float32) to calculate the mask, and apply it to the raw byte data.
         
+        """Processes a PointCloud2 message and publishes a filtered version.
+        
+        This function converts a PointCloud2 message to a numpy array, extracting the
+        x, y, and z coordinates while handling mixed field types. It calculates the
+        squared distance of points from the origin and applies a mask to filter out
+        points that are below a specified minimum range or are NaN. The filtered points
+        are then used to create a new PointCloud2 message, which is published to the
+        appropriate topic.
+        
+        Args:
+            msg: The PointCloud2 message containing the point cloud data.
+        """
         try:
             # Read x, y, z using generator (bypasses numpy type checks in read_points_numpy)
             # skip_nans=False to preserve 1:1 mapping with msg.data indices
