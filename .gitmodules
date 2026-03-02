@@ -1,9 +1,12 @@
 [submodule "src/rtabmap"]
 	path = src/rtabmap
 	url = https://github.com/thippeswammy/rtabmap.git
+	branch = master
 [submodule "src/rtabmap_ros"]
 	path = src/rtabmap_ros
 	url = https://github.com/thippeswammy/rtabmap_ros.git
+	branch = ros2
 [submodule "src/SuperGluePretrainedNetwork"]
 	path = src/SuperGluePretrainedNetwork
 	url = https://github.com/thippeswammy/SuperGluePretrainedNetwork.git
+	branch = master
